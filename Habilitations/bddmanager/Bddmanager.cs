@@ -23,6 +23,8 @@ namespace Habilitations.bddmanager
         /// <param name="stringConnect">chaine de connexion</param>
         private BddManager(string stringConnect)
         {
+            // Ajout de paramètres SSL à la chaîne de connexion
+            stringConnect += ";SslMode=Required;"; // Assurez-vous que cela ne crée pas de doublons dans la chaîne
             connection = new MySqlConnection(stringConnect);
             connection.Open();
         }

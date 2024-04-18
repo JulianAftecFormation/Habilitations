@@ -248,5 +248,9 @@ namespace Habilitations.view
             txtPwd2.Text = "";
         }
 
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

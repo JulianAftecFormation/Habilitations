@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Habilitations.model;
+using System;
 using System.Collections.Generic;
-using Habilitations.model;
 
 namespace Habilitations.dal
 {
@@ -13,13 +13,46 @@ namespace Habilitations.dal
         /// Instance unique de l'accès aux données
         /// </summary>
         private readonly Access access = null;
-
         /// <summary>
         /// Constructeur pour créer l'accès aux données
         /// </summary>
         public DeveloppeurAccess()
         {
             access = Access.GetInstance();
+        }
+
+        /// <summary>
+        /// Controle si l'utillisateur a le droit de se connecter (nom, prénom, pwd et profil "admin")
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="pwd"></param>
+        /// <returns>vrai si l'utilisateur a le profil "admin"</returns>
+        public Boolean ControleAuthentification(Admin admin)
+        {
+            if (access.Manager != null)
+            {
+                string req = "select * from developpeur d join profil p on d.idprofil=p.idprofil ";
+                req += "where d.nom=@nom and d.prenom=@prenom and pwd=SHA2(@pwd, 256) and p.nom='admin';";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@nom", admin.Nom);
+                parameters.Add("@prenom", admin.Prenom);
+                parameters.Add("@pwd", admin.Pwd);
+                try
+                {
+                    List<Object[]> records = access.Manager.ReqSelect(req, parameters);
+                    if (records != null)
+                    {
+                        return (records.Count > 0);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Environment.Exit(0);
+                }
+            }
+            return false;
         }
 
         /// <summary>
@@ -56,7 +89,6 @@ namespace Habilitations.dal
             }
             return lesDeveloppeurs;
         }
-
         /// <summary>
         /// Demande de suppression d'un développeur
         /// </summary>
@@ -79,7 +111,6 @@ namespace Habilitations.dal
                 }
             }
         }
-
         /// <summary>
         /// Demande d'ajout un développeur
         /// </summary>
@@ -108,7 +139,6 @@ namespace Habilitations.dal
                 }
             }
         }
-
         /// <summary>
         /// Demande de modification d'un développeur
         /// </summary>
@@ -137,7 +167,6 @@ namespace Habilitations.dal
                 }
             }
         }
-
         /// <summary>
         /// Demande de modification du pwd
         /// </summary>
@@ -162,6 +191,5 @@ namespace Habilitations.dal
                 }
             }
         }
-
     }
 }
