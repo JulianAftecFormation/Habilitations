@@ -177,12 +177,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2A21C5DA6E004BDCA553ED8492B0EDAB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2B6087A896E4A27B01FCF58D29AD515D"
         "OwnerKey" = "8:_490F528897014FB198F4259B828CA26F"
         "MsmSig" = "8:_UNDEFINED"
@@ -533,6 +527,12 @@
         {
         "MsmKey" = "8:_8A319D844920B14DB13DFD3AFECC51C4"
         "OwnerKey" = "8:_490F528897014FB198F4259B828CA26F"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8A86FC62A283437681A0E5AEF18330EE"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2464,26 +2464,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2A21C5DA6E004BDCA553ED8492B0EDAB"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\habilitations.ico"
-            "TargetName" = "8:habilitations.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_34DCCFF8A4A64548890954A833AE54E8"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2B6087A896E4A27B01FCF58D29AD515D"
             {
             "AssemblyRegister" = "3:1"
@@ -4032,6 +4012,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A86FC62A283437681A0E5AEF18330EE"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\OIP.ico"
+            "TargetName" = "8:OIP.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_34DCCFF8A4A64548890954A833AE54E8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8AD4ADD314687F649E6F5654BF17635E"
@@ -5834,7 +5834,7 @@
             "Target" = "8:_490F528897014FB198F4259B828CA26F"
             "Folder" = "8:_8E20FF7E462B4F90B8B5D8D01B81A4A4"
             "WorkingFolder" = "8:_34DCCFF8A4A64548890954A833AE54E8"
-            "Icon" = "8:_2A21C5DA6E004BDCA553ED8492B0EDAB"
+            "Icon" = "8:_8A86FC62A283437681A0E5AEF18330EE"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BBEE6663666C47FCAC187DD54BF5B26B"
@@ -5848,7 +5848,7 @@
             "Target" = "8:_490F528897014FB198F4259B828CA26F"
             "Folder" = "8:_AF027F6CBD7C441283CD58E3755DC538"
             "WorkingFolder" = "8:_34DCCFF8A4A64548890954A833AE54E8"
-            "Icon" = "8:_2A21C5DA6E004BDCA553ED8492B0EDAB"
+            "Icon" = "8:_8A86FC62A283437681A0E5AEF18330EE"
             "Feature" = "8:"
             }
         }
